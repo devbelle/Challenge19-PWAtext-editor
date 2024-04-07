@@ -4,7 +4,7 @@ const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
       if (db.objectStoreNames.contains('jate')) {
-        console.log('jate database already exists');
+        console.log('JATE database already exists');
         return;
       }
       db.createObjectStore('jate', { keyPath: 'id', autoIncrement: true });
@@ -19,11 +19,11 @@ export const putDb = async (content) => {
 
   const jateDb = await openDB('jate', 1);
 
-  const tx = jateDb.transaction('jate', 'readwite');
+  const tx = jateDb.transaction('jate', 'readwrite');
 
   const store = tx.objectStore('jate');
 
-  const request = store.add({jate: content});
+  const request = store.add({id:1, value: content});
 
   const result = await request;
   console.log('Data saved to the database', result);
@@ -41,7 +41,7 @@ export const getDb = async () => {
   const tx = jateDb.transaction('jate', 'readonly');
 
   // Open up the desired object store.
-  const store = tx.objectStore('contact');
+  const store = tx.objectStore('jate');
 
   // Use the .getAll() method to get all data in the database.
   const request = store.getAll();

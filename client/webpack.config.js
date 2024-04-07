@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor'
+        title: 'JATE'
       }),
      
       // Injects our custom service worker
@@ -33,7 +33,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'PWA Text Editor',
+        name: 'JATE',
         short_name: 'JATE',
         description: 'Edit Text in Browser',
         background_color: '#225ca3',
