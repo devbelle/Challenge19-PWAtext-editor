@@ -2,8 +2,7 @@
 
 ##Description
 
-This is a Social Network Application designed for users to be able to communicate with other users. On this app, a user can post abd delete their own thoughts, create and delete reactions for other people's thoughts, and add and delete friends they meet on this social network. Having a functional socil media app will help users connect with one another.
-
+This is a text editor application. This application is designed to save text entries that te user enters and edit them in the future.
 
 To access, copy the repository in github, then use the git clone function in command line to clone this repository into your local machine.
 
@@ -24,8 +23,8 @@ All commits and changes to this assignment were implemented by Devin Belle
 
 ##Features
 
-Backend uses , express, and moment js to funtion. As well as needing mongoose and validator.
+Backend uses , express, and concurrently. requires node js and 
 
 ##Tests
 
-Use mongoose to run the darabase, then run the seeds files using node js. Can test with insomnia or running in a browser once the localhost 3001 port is running.
+Use npm run build to run the darabase, then use npm start to run. Can test with insomnia or running in a browser once the localhost 3001 port is running.
